@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Legend — GTA VI Trophy Guide &amp; Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <h1>Leonida Legend</h1>
+    <p class="tagline">GTA VI Trophy Guide &amp; Tracker — every one of the 55 PlayStation 5 trophies, with a guide and its sources for each. Works fully offline.</p>
+  </div>
+  <div class="progress-card" id="progress-card">
+    <div class="progress-big"><span id="earned-count">0</span><span class="progress-of"> / 55 earned</span></div>
+    <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+    <div class="grade-tallies" id="grade-tallies"></div>
+    <p class="list-makeup">The official list: 55 trophies · 1 platinum · 2 gold · 6 silver · 46 bronze · 28 hidden on PlayStation until earned.</p>
+  </div>
+</header>
+
+<nav class="tabs" id="tabs">
+  <button type="button" class="tab is-active" data-view="checklist" id="tab-checklist">Checklist &amp; guides</button>
+  <button type="button" class="tab" data-view="roadmap" id="tab-roadmap">Platinum roadmap</button>
+  <button type="button" class="tab" data-view="missables" id="tab-missables">Missables</button>
+  <button type="button" class="tab" data-view="save" id="tab-save">Save &amp; data</button>
+</nav>
+
+<main>
+  <section id="view-checklist" class="view is-active">
+    <div class="toolbar" id="toolbar">
+      <input type="search" id="search" placeholder="Search trophies by name…" aria-label="Search trophies">
+      <div class="chips" id="kind-chips" role="group" aria-label="Filter by kind">
+        <button type="button" class="chip is-active" data-kind="all">All kinds</button>
+        <button type="button" class="chip" data-kind="story">Story</button>
+        <button type="button" class="chip" data-kind="missable">Missable</button>
+        <button type="button" class="chip" data-kind="collectibles">Collectibles</button>
+        <button type="button" class="chip" data-kind="activities">Activities</button>
+        <button type="button" class="chip" data-kind="platinum">Platinum</button>
+      </div>
+      <label class="select-wrap">Grade
+        <select id="grade-filter">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="toggle"><input type="checkbox" id="spoiler-toggle" checked> Spoiler mode — hide story trophies until earned</label>
+      <label class="toggle"><input type="checkbox" id="hide-earned-toggle"> Hide earned</label>
+    </div>
+
+    <div class="next-up" id="next-up"></div>
+
+    <div class="checklist-layout">
+      <ol class="trophy-list" id="trophy-list"></ol>
+      <aside class="detail-pane" id="detail-pane" aria-live="polite"></aside>
+    </div>
+  </section>
+
+  <section id="view-roadmap" class="view">
+    <h2>Roadmap to the platinum</h2>
+    <p class="view-intro">Five stages, built from the official descriptions: story first (catching the missable moments as they pass), then the character strands, the state-wide counts and collectibles, the money and mayhem, and finally the 100% sweep. No stage needs anything from a later one.</p>
+    <div id="roadmap-stages"></div>
+  </section>
+
+  <section id="view-missables" class="view">
+    <h2>Missable trophies — catch these as they pass</h2>
+    <p class="view-intro">Most of the list can be earned whenever you like. These are the exceptions: the official descriptions tie them to a single mission, scene or retry, so this guide flags them missable until chapter replay is proven to cover them. Do them the first time the moment comes.</p>
+    <div id="missable-cards"></div>
+  </section>
+
+  <section id="view-save" class="view">
+    <h2>Save &amp; data</h2>
+    <p class="view-intro">Your checklist, counters and settings save automatically in this browser (localStorage) as you work — no account, no network. Take the file with you to keep a backup or move to another machine.</p>
+    <div class="save-actions">
+      <button type="button" class="action-btn" id="export-btn">Export progress to a file</button>
+      <label class="action-btn file-label">Import progress from a file
+        <input type="file" id="import-file" accept="application/json,.json" hidden>
+      </label>
+      <button type="button" class="action-btn danger" id="reset-btn">Erase all progress</button>
+    </div>
+    <p class="save-note" id="save-note"></p>
+    <h3>About the guides</h3>
+    <p class="view-intro">Trophy names, descriptions, grades and tracked counts are the official PlayStation list as published by Exophase and PSNProfiles; every guide below them is written for this entry in our own words from the official descriptions, and names its sources beside the trophy. The roadmap and the missable flags are likewise built from the official descriptions. No Rockstar Games logo or artwork is used anywhere in this guide.</p>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>Leonida Legend — an unofficial, fan-made guide. Grand Theft Auto VI and PlayStation are trademarks of their owners; this guide is not affiliated with Rockstar Games or Sony.</p>
+</footer>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
